@@ -137,32 +137,46 @@ The distribution is consistent with expected statistical behavior and shows no s
 
 ---
 
-### 🔹 Example Run (LSB + Von Neumann, z ≈ 3.20)
+### 🔹 Aggregated Accumulator Behavior (LSB + Von Neumann)
 
-![Example run](data/plots/visualization-of-data.png)
+![Accumulator plot](data/plots/visualization-of-data.png)
 
-Example of a live run:
+This plot shows the cumulative accumulator behavior across multiple runs.
 
-**Method:**
-- LSB sampling + Von Neumann debiasing  
+The curves represent:
 
-**UP channel:**
-- Accumulator: +39,208  
-- Bits: 150,000,000  
-- z-score: +3.20  
-- p ≈ 0.00137 (two-sided)  
+- **UP** – intention to increase the accumulator  
+- **DOWN** – intention to decrease the accumulator  
+- **NONE** – control condition  
 
-**DOWN channel:**
-- z ≈ −0.29  
+Reference lines for ±1σ, ±2σ, and ±3σ indicate expected statistical boundaries.
 
-**NONE (control):**
-- z ≈ −0.47  
+---
 
-**Combined:**
-- Stouffer z ≈ 2.52  
-- p ≈ 0.0117  
+### Observations
 
-The UP curve approaches the +3σ boundary, illustrating a statistically notable fluctuation within a single run.
+- The **UP curve reaches approximately z ≈ +3.2**, indicating a notable cumulative deviation  
+- The **DOWN** and **NONE** curves remain close to expected statistical limits  
+- Fluctuations occur over time, consistent with stochastic processes  
+
+---
+
+### Interpretation
+
+- A z-score of ~3.2 corresponds to a low-probability event under pure randomness  
+- However, this result reflects **accumulated data across runs**, not a single independent trial  
+- Proper statistical interpretation requires careful consideration of:
+  - independence of runs  
+  - multiple testing effects  
+  - long-term reproducibility  
+
+---
+
+### Notes
+
+- This visualization aggregates data across runs  
+- It should not be interpreted as a single continuous experiment  
+- Individual run statistics are available in `/data/logs/`  
 
 ---
 
