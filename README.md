@@ -125,9 +125,7 @@ These notebooks show distributions, bit balance, and statistical evaluation of c
 ### 3. Software
 
 * Open the notebooks using Jupyter:
-
 * jupyter notebook
-
 * Then open one of the notebooks in `/software` and run the cells.
 
 ---
