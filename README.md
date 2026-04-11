@@ -27,13 +27,14 @@ This implementation is an independent, open-source experimental setup.
 ### Hardware
 
 * Zener diode noise source
-* Multi-stage analog amplifier
+* Multi-stage analog amplifier (MCP6024)
 * Output connected to Teensy 4.1 ADC
 
 ### Firmware (Teensy)
 
 * Reads analog signal from ADC
 * Sends data over serial
+* File: `teensy_noise.ino`
 
 ### Software (Python)
 
@@ -41,6 +42,33 @@ This implementation is an independent, open-source experimental setup.
 * Converts signal into bits
 * Performs statistical analysis (z-score, p-values)
 * Visualizes results
+
+---
+
+## Hardware
+
+### Breadboard version
+
+![Breadboard](breadboard.png)
+
+### Signal flow
+
+1. Zener diode generates analog noise
+2. MCP6024 op-amp amplifies the signal through multiple stages
+3. Output is sampled by the Teensy 4.1 ADC
+
+### Notes
+
+* High gain amplification makes the circuit sensitive to noise
+* Breadboard wiring may introduce additional interference
+* A PCB version is recommended for improved stability
+
+### Files
+
+* `noise_generator.fzz` – Fritzing project (open in Fritzing)
+* `schematic.png` – circuit overview
+* `pcb.png` – PCB layout
+* `gerbers.zip` – files for PCB manufacturing
 
 ---
 
@@ -62,7 +90,7 @@ The output is analyzed to detect deviations from expected randomness.
 ## Repository Structure
 
 ```
-/hardware     → Fritzing design and images  
+/hardware     → circuit design and images  
 /firmware     → Teensy code  
 /software     → Python analysis  
 /data         → Example output  
@@ -80,7 +108,9 @@ The output is analyzed to detect deviations from expected randomness.
 
 ### 2. Firmware
 
-* Upload the Teensy code from `/firmware` to the board
+* Open `teensy_noise.ino` in Arduino IDE (with Teensy support)
+* Select Teensy 4.1
+* Upload to the board
 
 ### 3. Software
 
@@ -115,3 +145,4 @@ Work in progress
 ## License
 
 Open source
+
