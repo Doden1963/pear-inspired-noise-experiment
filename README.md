@@ -18,12 +18,36 @@ The goal is to explore whether directed intention correlates with deviations fro
 
 ## ⚙️ How It Works
 
+## 🔌 Hardware Setup
+
+The noise source is based on a reverse-biased zener diode, amplified and sampled by a Teensy 4.1.
+
+### Breadboard / Circuit Overview
+
+![Breadboard view](hardware/breadboard.png)
+
+### Key components:
+
+- Zener diode (noise source)  
+- Multi-stage amplification (~10,000× total gain)  
+- Teensy 4.1 (12-bit ADC sampling)  
+- External 3.3V voltage regulator  
+
+The amplified noise signal is fed into the ADC input of the Teensy for digitization.
+
+---
+
+### Notes
+
+- The signal is extremely small before amplification  
+- Physical layout and grounding can affect noise characteristics  
+- The system is sensitive to electrical interference  
+
 ### Hardware
 
 - Zener diode noise source  
 - Analog amplification (~10,000×)  
 - Teensy 4.1 microcontroller (12-bit ADC)  
-- External 3.3V regulator  
 
 ### Sampling
 
@@ -49,7 +73,7 @@ The goal is to explore whether directed intention correlates with deviations fro
 ## 📊 Example Results
 
 This section shows selected visualizations from experimental runs.  
-All plots are generated directly from recorded data and can be reproduced from the files in the `/data` folder.
+All plots are generated directly from recorded data and can be reproduced from the file in the `/data/logs` folder.
 
 ---
 
