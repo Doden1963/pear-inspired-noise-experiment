@@ -138,9 +138,13 @@ pear-inspired-noise-experiment/
 │
 ├── data/
 │ ├── logs/ # Statistical results
-│ └── plots/ # Generated plots
+│ └── plots/ # Generated plots (histograms, run visuals)
 │
-├── software/ # Python + Teensy code
+├── firmware/ # Teensy 4.1 code (data acquisition)
+│
+├── hardware/ # Circuit design and hardware documentation
+│
+├── software/ # Python GUI, processing, and analysis
 │
 └── README.md
 
