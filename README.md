@@ -108,7 +108,7 @@ The output is analyzed to detect deviations from expected randomness.
 
 ### 2. Firmware
 
-* Open `teensy_noise.ino` in Arduino IDE (with Teensy support)
+* Open `Sampling.ino` in Arduino IDE (with Teensy support)
 * Select Teensy 4.1
 * Upload to the board
 
