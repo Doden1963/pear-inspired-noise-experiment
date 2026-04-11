@@ -2,7 +2,7 @@
 
 Fritzing breadboard layout:
 
-![Breadboard](hardware/breadboard.png)
+![Breadboard](breadboard.png)
 
 ### Signal flow
 
