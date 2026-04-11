@@ -112,19 +112,7 @@ The output is analyzed to detect deviations from expected randomness.
 * Select Teensy 4.1
 * Upload to the board
 
-### 3. Software
 
-Install dependencies:
-
-```
-pip install -r software/requirements.txt
-```
-
-Run the program:
-
-```
-python software/main.py
-```
 
 ---
 
