@@ -26,7 +26,7 @@ The noise source is based on a reverse-biased zener diode, amplified and sampled
 
 ### 🔹 PCB Implementation
 
-![PCB view](hardware/pcb.png)
+![PCB view](hardware/actual-pcb.jpg)
 
 The PCB provides a stable and low-noise implementation of the analog front-end, reducing interference and improving reproducibility.
 
