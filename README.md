@@ -114,4 +114,4 @@ Work in progress
 
 ## License
 
-Open source (you can choose a license later)
+Open source
