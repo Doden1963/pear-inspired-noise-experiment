@@ -14,6 +14,20 @@ The goal is to explore whether directed intention correlates with deviations fro
 
 ⚠️ This project is exploratory and does **not claim proof** of any effect.
 
+## 🎥 Video Demonstration
+
+A short video showing a live run of the system:
+
+👉 https://youtu.be/2O-MlB6RiJg
+
+The video demonstrates:
+
+- Real-time data acquisition from the hardware  
+- Live accumulator behavior (UP / DOWN / NONE)  
+- Statistical evolution during a run  
+
+This provides a visual reference for how the system operates in practice.
+
 ---
 
 ## ⚙️ How It Works
@@ -45,7 +59,6 @@ Initial prototyping was performed on a breadboard. While flexible, this setup is
 - Zener diode (noise source)  
 - Multi-stage amplification (~10,000× gain)  
 - Teensy 4.1 (12-bit ADC)  
-- External 3.3V regulator  
 
 ---
 
@@ -53,13 +66,7 @@ Initial prototyping was performed on a breadboard. While flexible, this setup is
 
 - The signal is extremely small before amplification  
 - Physical layout significantly affects noise characteristics  
-- Shielding and grounding are important for stable measurements  
-
-### Hardware
-
-- Zener diode noise source  
-- Analog amplification (~10,000×)  
-- Teensy 4.1 microcontroller (12-bit ADC)  
+- Shielding and grounding are important for stable measurements   
 
 ### Sampling
 
