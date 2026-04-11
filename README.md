@@ -22,26 +22,38 @@ The goal is to explore whether directed intention correlates with deviations fro
 
 The noise source is based on a reverse-biased zener diode, amplified and sampled by a Teensy 4.1.
 
-### Breadboard / Circuit Overview
+---
+
+### 🔹 PCB Implementation
+
+![PCB view](hardware/pcb.png)
+
+The PCB provides a stable and low-noise implementation of the analog front-end, reducing interference and improving reproducibility.
+
+---
+
+### 🔹 Breadboard Prototype (Development)
 
 ![Breadboard view](hardware/breadboard.png)
+
+Initial prototyping was performed on a breadboard. While flexible, this setup is more sensitive to noise and connection instability.
+
+---
 
 ### Key components:
 
 - Zener diode (noise source)  
-- Multi-stage amplification (~10,000× total gain)  
-- Teensy 4.1 (12-bit ADC sampling)  
-- External 3.3V voltage regulator  
-
-The amplified noise signal is fed into the ADC input of the Teensy for digitization.
+- Multi-stage amplification (~10,000× gain)  
+- Teensy 4.1 (12-bit ADC)  
+- External 3.3V regulator  
 
 ---
 
 ### Notes
 
 - The signal is extremely small before amplification  
-- Physical layout and grounding can affect noise characteristics  
-- The system is sensitive to electrical interference  
+- Physical layout significantly affects noise characteristics  
+- Shielding and grounding are important for stable measurements  
 
 ### Hardware
 
