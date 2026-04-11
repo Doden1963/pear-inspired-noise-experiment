@@ -7,7 +7,7 @@ All plots are generated directly from recorded data and can be reproduced from t
 
 ### 🔹 Combined Histograms (UP / DOWN / NONE)
 
-![UP DOWN NONE histograms](data/plots/UP%20DOWN%20NONE%20histograms.png)
+![UP DOWN NONE histograms](plots/UP%20DOWN%20NONE%20histograms.png)
 
 Histograms of run results for the three experimental conditions:
 
@@ -33,7 +33,7 @@ Observations:
 
 ### 🔹 All Runs Histogram
 
-![All runs histogram](data/plots/All%20runs%20histrogram.png)
+![All runs histogram](plots/All%20runs%20histrogram.png)
 
 Combined distribution across all runs (n = 422):
 
