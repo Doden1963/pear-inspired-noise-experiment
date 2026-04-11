@@ -34,7 +34,7 @@ This implementation is an independent, open-source experimental setup.
 
 * Reads analog signal from ADC
 * Sends data over serial
-* File: `teensy_noise.ino`
+* File: `Sampling.ino`
 
 ### Software (Python)
 
