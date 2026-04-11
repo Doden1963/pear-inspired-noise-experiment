@@ -96,7 +96,7 @@ The distribution is consistent with expected statistical behavior and shows no s
 
 ### 🔹 Example Run (LSB + Von Neumann, z ≈ 3.20)
 
-![Example run](data/plots/Skærmbillede%202026-04-11%20201932.png)
+![Example run](data/plots/visualization-of-data.png)
 
 Example of a live run:
 
