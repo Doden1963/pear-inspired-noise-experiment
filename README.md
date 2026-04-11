@@ -74,16 +74,15 @@ This implementation is an independent, open-source experimental setup.
 
 ## Experimental Method
 
-Each run consists of:
+Experiments are performed as separate runs under different conditions:
 
-* **Baseline period** (no intention)
-* **Test period** with one of the following conditions:
+* UP (intention to increase values)  
+* DOWN (intention to decrease values)  
+* NONE (control condition, no intention)  
 
-  * UP (intention to increase values)
-  * DOWN (intention to decrease values)
-  * NONE (control condition)
+Each run produces a sequence of bits which is analyzed statistically.
 
-The output is analyzed to detect deviations from expected randomness.
+Comparisons are made between runs to detect deviations from expected randomness.
 
 ---
 
