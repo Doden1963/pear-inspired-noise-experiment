@@ -14,6 +14,19 @@ The goal is to explore whether intention (e.g. focusing on "UP" or "DOWN") may i
 
 ---
 
+## Example Run (Video)
+
+A real experiment run demonstrating data acquisition and statistical accumulation:
+
+https://youtu.be/2O-MlB6RiJg
+
+The video shows:
+- live data from the Teensy 4.1  
+- bit generation  
+- statistical behavior during a run  
+
+---
+
 ## Inspiration
 
 This project is inspired by the work of Princeton Engineering Anomalies Research (PEAR), which investigated whether human intention could influence random physical systems.
