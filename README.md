@@ -146,16 +146,6 @@ pear-inspired-noise-experiment/
 
 ---
 
-## 🔁 Reproducibility
-
-All results can be reproduced from:
-
-- `/data/bit_dumps/` → raw bitstreams  
-- `/data/logs/` → statistical outputs  
-- `/software/` → processing and analysis code  
-
----
-
 ## 🎯 Purpose
 
 This project aims to:
