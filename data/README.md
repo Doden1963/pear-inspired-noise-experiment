@@ -77,16 +77,6 @@ The UP curve approaches the +3σ region, illustrating a statistically notable de
 
 ---
 
-## 📁 Reproducibility
-
-All plots shown above can be traced back to:
-
-- Raw bitstreams in `/data/bit_dumps/`
-- Log files in `/data/logs/`
-- Processing pipeline in `/software/`
-
----
-
 ## ⚠️ Notes
 
 - Individual runs can occasionally reach z-scores around 2–3 by chance  
