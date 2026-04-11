@@ -87,6 +87,17 @@ The output is analyzed to detect deviations from expected randomness.
 
 ---
 
+## Example Analysis
+
+Example data analysis and visualizations can be found in:
+
+* `software/historical_histograms.ipynb`
+* `software/pear_experiment_15000hz_von_neumann.ipynb`
+
+These notebooks show distributions, bit balance, and statistical evaluation of collected data.
+
+---
+
 ## Repository Structure
 
 ```
@@ -112,7 +123,21 @@ The output is analyzed to detect deviations from expected randomness.
 * Select Teensy 4.1
 * Upload to the board
 
+### 3. Software
 
+Install dependencies:
+
+```
+pip install -r software/requirements.txt
+```
+
+Run your analysis (example):
+
+```
+jupyter notebook
+```
+
+Open one of the notebooks in `/software` and run the cells.
 
 ---
 
@@ -133,4 +158,3 @@ Work in progress
 ## License
 
 Open source
-
