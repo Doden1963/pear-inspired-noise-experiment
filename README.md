@@ -124,19 +124,11 @@ These notebooks show distributions, bit balance, and statistical evaluation of c
 
 ### 3. Software
 
-Install dependencies:
+Open the notebooks using Jupyter:
 
-```
-pip install -r software/requirements.txt
-```
-
-Run your analysis (example):
-
-```
 jupyter notebook
-```
 
-Open one of the notebooks in `/software` and run the cells.
+Then open one of the notebooks in `/software` and run the cells.
 
 ---
 
