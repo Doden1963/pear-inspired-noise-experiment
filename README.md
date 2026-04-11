@@ -22,7 +22,6 @@ https://youtu.be/2O-MlB6RiJg
 
 The video shows:
 - live data from the Teensy 4.1  
-- bit generation  
 - statistical behavior during a run  
 
 ---
