@@ -49,7 +49,7 @@ This suggests no strong global bias across all runs.
 
 ### 🔹 Example Run (LSB + Von Neumann, z ≈ 3.20)
 
-![Example run](data/plots/Skærmbillede%202026-04-11%20201932.png)
+![Example run](plots/Skærmbillede%202026-04-11%20201932.png)
 
 Example of a live run using:
 
