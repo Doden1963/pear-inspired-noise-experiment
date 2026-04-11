@@ -49,7 +49,7 @@ This implementation is an independent, open-source experimental setup.
 
 ### Breadboard version
 
-![Breadboard](breadboard.png)
+![Breadboard](hardware/breadboard.png)
 
 ### Signal flow
 
