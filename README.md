@@ -1,161 +1,183 @@
 # PEAR-Inspired Noise Experiment
 
-Zener-based noise experiment using Teensy 4.1 to test possible effects of intention on randomness.
+Zener-based noise experiment using a Teensy 4.1 to explore whether intention (e.g. focusing on "UP" or "DOWN") may influence statistical properties of random data.
 
 ---
 
-## Overview
+## 🔍 Overview
 
-This project generates analog electronic noise using a zener diode, amplifies the signal through multiple stages, and samples it with a Teensy 4.1 microcontroller.
+This project generates analog electronic noise using a zener diode, amplifies the signal, and samples it with a microcontroller.
 
-The sampled signal is converted into bits and analyzed statistically using Python.
+The sampled signal is converted into a bitstream and analyzed statistically in real time using Python.
 
-The goal is to explore whether intention (e.g. focusing on "UP" or "DOWN") may influence statistical properties of the generated noise.
+The goal is to explore whether directed intention correlates with deviations from expected randomness, inspired by experiments conducted by the Princeton Engineering Anomalies Research (PEAR) lab.
 
----
-
-## Example Run (Video)
-
-A real experiment run demonstrating data acquisition and statistical accumulation:
-
-https://youtu.be/2O-MlB6RiJg
-
-The video shows:
-- live data from the Teensy 4.1  
-- statistical behavior during a run  
+⚠️ This project is exploratory and does **not claim proof** of any effect.
 
 ---
 
-## Inspiration
-
-This project is inspired by the work of Princeton Engineering Anomalies Research (PEAR), which investigated whether human intention could influence random physical systems.
-
-This implementation is an independent, open-source experimental setup.
-
----
-
-## System Architecture
+## ⚙️ How It Works
 
 ### Hardware
 
-* Zener diode noise source
-* Multi-stage analog amplifier (MCP6024)
-* Output connected to Teensy 4.1 ADC
+- Zener diode noise source  
+- Analog amplification (~10,000×)  
+- Teensy 4.1 microcontroller (12-bit ADC)  
+- External 3.3V regulator  
 
-### Firmware (Teensy)
+### Sampling
 
-* Reads analog signal from ADC
-* Sends data over serial
-* File: `Sampling.ino`
+- ~15,000 samples per second  
+- 12-bit resolution (0–4095)  
 
-### Software (Python)
+### Bit Generation
 
-* Receives data stream
-* Converts signal into bits
-* Performs statistical analysis (z-score, p-values)
-* Visualizes results
+- Least Significant Bit (LSB) extraction  
+- Von Neumann debiasing  
+  - 00 / 11 → discarded  
+  - 01 → 0  
+  - 10 → 1  
 
----
+### Channels
 
-## Hardware
-
-### Breadboard version
-
-![Breadboard](hardware/breadboard.png)
-
-### Signal flow
-
-1. Zener diode generates analog noise
-2. MCP6024 op-amp amplifies the signal through multiple stages
-3. Output is sampled by the Teensy 4.1 ADC
-
-### Notes
-
-* High gain amplification makes the circuit sensitive to noise
-* Breadboard wiring may introduce additional interference
-* A PCB version is recommended for improved stability
-
-### Files
-
-* `noise_generator.fzz` – Fritzing project (open in Fritzing)
-* `schematic.png` – circuit overview
-* `pcb.png` – PCB layout
-* `gerbers.zip` – files for PCB manufacturing
+- **UP** → intention to increase accumulator  
+- **DOWN** → intention to decrease accumulator  
+- **NONE** → control (no intention)
 
 ---
 
-## Experimental Method
+## 📊 Example Results
 
-Experiments are performed as separate runs under different conditions:
-
-* UP (intention to increase values)  
-* DOWN (intention to decrease values)  
-* NONE (control condition, no intention)  
-
-Each run produces a sequence of bits which is analyzed statistically.
-
-Comparisons are made between runs to detect deviations from expected randomness.
+This section shows selected visualizations from experimental runs.  
+All plots are generated directly from recorded data and can be reproduced from the files in the `/data` folder.
 
 ---
 
-## Example Analysis
+### 🔹 Combined Histograms (UP / DOWN / NONE)
 
-Example data analysis and visualizations can be found in:
+![UP DOWN NONE histograms](data/plots/UP%20DOWN%20NONE%20histograms.png)
 
-* `software/historical_histograms.ipynb`
-* `software/pear_experiment_15000hz_von_neumann.ipynb`
+Histograms of run results for the three experimental conditions:
 
-These notebooks show distributions, bit balance, and statistical evaluation of collected data.
+- **UP** – intention to increase the accumulator  
+- **DOWN** – intention to decrease the accumulator  
+- **NONE** – no intention (control condition)
 
----
+Each histogram shows:
 
-## Repository Structure
+- Distribution of run results  
+- Empirical mean  
+- Empirical standard deviation (σ)  
+- Theoretical σ (≈ 1000)  
+- Reference lines for ±1σ, ±2σ, ±3σ  
 
-```
-/hardware     → circuit design and images  
-/firmware     → Teensy code  
-/software     → Python analysis  
-/data         → Example output  
-/docs         → Method and results  
-```
+**Observations:**
 
----
-
-## How to Use
-
-### 1. Hardware
-
-* Open the Fritzing file in `/hardware`
-* Build the circuit as shown
-
-### 2. Firmware
-
-* Open `Sampling.ino` in Arduino IDE (with Teensy support)
-* Select Teensy 4.1
-* Upload to the board
-
-### 3. Software
-
-* Open the notebooks using Jupyter:
-* jupyter notebook
-* Then open one of the notebooks in `/software` and run the cells.
+- Distributions are approximately normal  
+- Means are close to zero  
+- Empirical σ is close to theoretical values  
 
 ---
 
-## Notes
+### 🔹 All Runs Histogram
 
-* This is an experimental system and results should be interpreted with care
-* Noise sources and analog amplification are sensitive to layout and environment
-* Statistical fluctuations can occur naturally
+![All runs histogram](data/plots/All%20runs%20histrogram.png)
+
+Combined distribution across all runs:
+
+- n = 422  
+- Mean ≈ 69.1  
+- Empirical σ ≈ 1035  
+- Theoretical σ ≈ 1000  
+
+The distribution is consistent with expected statistical behavior and shows no strong global bias.
 
 ---
 
-## Status
+### 🔹 Example Run (LSB + Von Neumann, z ≈ 3.20)
 
-Work in progress
+![Example run](data/plots/Skærmbillede%202026-04-11%20201932.png)
+
+Example of a live run:
+
+**Method:**
+- LSB sampling + Von Neumann debiasing  
+
+**UP channel:**
+- Accumulator: +39,208  
+- Bits: 150,000,000  
+- z-score: +3.20  
+- p ≈ 0.00137 (two-sided)  
+
+**DOWN channel:**
+- z ≈ −0.29  
+
+**NONE (control):**
+- z ≈ −0.47  
+
+**Combined:**
+- Stouffer z ≈ 2.52  
+- p ≈ 0.0117  
+
+The UP curve approaches the +3σ boundary, illustrating a statistically notable fluctuation within a single run.
 
 ---
 
-## License
+## 🧪 Experimental Notes
 
-Open source
+- Individual runs can reach z ≈ 2–3 by chance  
+- Statistical interpretation requires many independent runs  
+- Von Neumann debiasing reduces bias but lowers bit rate  
+- Small mean offsets are expected in finite datasets  
+
+---
+
+## 📁 Project Structure
+
+pear-inspired-noise-experiment/
+│
+├── data/
+│ ├── logs/ # Statistical results
+│ └── plots/ # Generated plots
+│
+├── software/ # Python + Teensy code
+│
+└── README.md
+
+---
+
+## 🔁 Reproducibility
+
+All results can be reproduced from:
+
+- `/data/bit_dumps/` → raw bitstreams  
+- `/data/logs/` → statistical outputs  
+- `/software/` → processing and analysis code  
+
+---
+
+## 🎯 Purpose
+
+This project aims to:
+
+- Build a transparent, reproducible noise experiment  
+- Explore statistical behavior of physical randomness  
+- Investigate (without assumption) possible correlations with intention  
+
+---
+
+## ⚠️ Disclaimer
+
+This project is exploratory and should not be interpreted as evidence of causal effects without rigorous statistical validation and independent replication.
+
+---
+
+## 📌 Inspiration
+
+Inspired by the work of the Princeton Engineering Anomalies Research (PEAR) program.
+
+---
+
+## 📬 Contributions
+
+Suggestions, critiques, and replication attempts are welcome.
