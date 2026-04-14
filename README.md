@@ -22,7 +22,7 @@ The goal is to explore whether directed intention correlates with deviations fro
 
 A short video showing a live run of the system:
 
-👉 https://youtu.be/2O-MlB6RiJg
+👉 [(https://img.youtu.be/2O-MlB6RiJg/vi/0.jpg)](https://youtu.be/2O-MlB6RiJg)
 
 The video demonstrates:
 
