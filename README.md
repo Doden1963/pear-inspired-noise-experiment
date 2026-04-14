@@ -1,6 +1,10 @@
-# PEAR-Inspired Noise Experiment
+## 📌 Inspiration
 
-Zener-based noise experiment using a Teensy 4.1 to explore whether intention (e.g. focusing on "UP" or "DOWN") may influence statistical properties of random data.
+This project is inspired by the work of the Princeton Engineering Anomalies Research (PEAR) program.
+
+The following video provides an overview of their experiments and approach:
+
+[![PEAR Lab video](https://img.youtube.com/vi/8A6pPLEzkhg/0.jpg)](https://www.youtube.com/watch?v=8A6pPLEzkhg)
 
 ---
 
