@@ -1,10 +1,20 @@
 ## 📌 Inspiration
 
-This project is inspired by the work of the Princeton Engineering Anomalies Research (PEAR) program.
+This project is inspired by the work of the Princeton Engineering Anomalies Research (PEAR) Lab.
 
-The following video provides an overview of their experiments and approach:
+The following video provides an overview of their experimental work and approach:
 
 [![PEAR Lab video](https://img.youtube.com/vi/8A6pPLEzkhg/0.jpg)](https://www.youtube.com/watch?v=8A6pPLEzkhg)
+
+### 🎞️ Interviews with Brenda Dunne (PEAR Lab)
+
+This playlist includes three interviews with Brenda Dunne (PEAR Lab) on *New Thinking Allowed* with Jeffrey Mishlove.
+
+The discussions cover experimental work on mind–matter interaction, methodology, and interpretation of results.
+
+[![Brenda Dunne playlist](https://img.youtube.com/vi/D-jgZBlyOek/0.jpg)](https://www.youtube.com/watch?v=D-jgZBlyOek&list=PL613Wzvi3ObDZJsnh43WpMpZ_Gc5zuUGy)
+
+These materials provide useful background for understanding the context of this project.
 
 ---
 
@@ -22,7 +32,7 @@ The goal is to explore whether directed intention correlates with deviations fro
 
 A short video showing a live run of the system:
 
-👉 [![Teensy Noise Experiment](https://img.youtube.com/vi/2O-MlB6RiJg/0.jpg)](https://youtu.be/2O-MlB6RiJg)
+[![Teensy Noise Experiment](https://img.youtube.com/vi/2O-MlB6RiJg/0.jpg)](https://youtu.be/2O-MlB6RiJg)
 
 The video demonstrates:
 
@@ -227,11 +237,6 @@ This project aims to:
 
 This project is exploratory and should not be interpreted as evidence of causal effects without rigorous statistical validation and independent replication.
 
----
-
-## 📌 Inspiration
-
-Inspired by the work of the Princeton Engineering Anomalies Research (PEAR) program.
 
 ---
 
