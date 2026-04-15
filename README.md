@@ -1,3 +1,41 @@
+## 🔍 Overview
+
+This project generates analog electronic noise using a zener diode, amplifies the signal, and samples it with a microcontroller.
+
+The sampled signal is converted into a bitstream and analyzed statistically in real time using Python.
+
+The focus is on building a complete measurement and data analysis system, working with real-time data, signal processing, and large datasets.
+
+The project is inspired by experiments from the Princeton Engineering Anomalies Research (PEAR) lab.
+
+⚠️ This project is exploratory and does **not claim proof** of any effect.
+
+## 🎥 Video Demonstration
+
+A short video showing a live run of the system:
+
+[![Teensy Noise Experiment](https://img.youtube.com/vi/2O-MlB6RiJg/0.jpg)](https://youtu.be/2O-MlB6RiJg)
+
+The video demonstrates:
+
+- Real-time data acquisition from the hardware  
+- Live accumulator behavior (UP / DOWN / NONE)  
+- Statistical evolution during a run  
+
+This provides a visual reference for how the system operates in practice.
+
+## What this project demonstrates
+
+- Hardware and software integration  
+- Real-time data acquisition  
+- Signal processing and statistical analysis  
+- Working with large datasets in Python  
+- Practical system development and debugging
+
+## System Overview
+
+Zener diode → Amplifier → Teensy ADC → Serial → Python → Analysis
+
 ## 📌 Inspiration
 
 This project is inspired by the work of the Princeton Engineering Anomalies Research (PEAR) Lab.
@@ -18,35 +56,9 @@ These materials provide useful background for understanding the context of this 
 
 ---
 
-## 🔍 Overview
-
-This project generates analog electronic noise using a zener diode, amplifies the signal, and samples it with a microcontroller.
-
-The sampled signal is converted into a bitstream and analyzed statistically in real time using Python.
-
-The goal is to explore whether directed intention correlates with deviations from expected randomness, inspired by experiments conducted by the Princeton Engineering Anomalies Research (PEAR) lab.
-
-⚠️ This project is exploratory and does **not claim proof** of any effect.
-
-## 🎥 Video Demonstration
-
-A short video showing a live run of the system:
-
-[![Teensy Noise Experiment](https://img.youtube.com/vi/2O-MlB6RiJg/0.jpg)](https://youtu.be/2O-MlB6RiJg)
-
-The video demonstrates:
-
-- Real-time data acquisition from the hardware  
-- Live accumulator behavior (UP / DOWN / NONE)  
-- Statistical evolution during a run  
-
-This provides a visual reference for how the system operates in practice.
-
----
-
 ## ⚙️ How It Works
 
-## 🔌 Hardware Setup
+### 🔌 Hardware Setup
 
 The noise source is based on a reverse-biased zener diode, amplified and sampled by a Teensy 4.1.
 
@@ -97,9 +109,9 @@ Initial prototyping was performed on a breadboard. While flexible, this setup is
 
 ### Channels
 
-- **UP** → intention to increase accumulator  
-- **DOWN** → intention to decrease accumulator  
-- **NONE** → control (no intention)
+- **UP** – condition A  
+- **DOWN** – condition B  
+- **NONE** – control condition  
 
 ---
 
@@ -227,9 +239,9 @@ pear-inspired-noise-experiment/
 
 This project aims to:
 
-- Build a transparent, reproducible noise experiment  
-- Explore statistical behavior of physical randomness  
-- Investigate (without assumption) possible correlations with intention  
+- Build a transparent and reproducible measurement system  
+- Explore statistical properties of physical noise  
+- Test for possible deviations under different experimental conditions  
 
 ---
 
